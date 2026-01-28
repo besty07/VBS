@@ -69,4 +69,11 @@ public class AdminController {
         historyRepo.save(h);
         return "user deleted successfully";
     }
+
+    @GetMapping("/histories")
+    public List<History> getHistories()
+    {
+        return historyRepo.findAll();
+    }
+
 }
